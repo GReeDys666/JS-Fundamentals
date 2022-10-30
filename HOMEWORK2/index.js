@@ -25,7 +25,7 @@
 
 // let userOpinion = prompt("Enter the number: ");
 
-// let result = (userOpinion > 0 && userOpinion % 2 == 0 && userOpinion / 7) ? alert("Your number is correct!") :  alert("Enter the correct number :(");
+// let result = (userOpinion > 0 && userOpinion % 2 == 0 && userOpinion % 7 == 0) ? alert("Your number is correct!") :  alert("Enter the correct number :(");
 
 // // END
 
@@ -56,11 +56,11 @@
 
 // // Task 5
 
-// let isAdult = prompt("Are you of legal age? Y/N");
+// let isAdult = +prompt("Enter your age:");
 
-// if (isAdult == "Y") {
+// if (isAdult >= 18) {
 //     alert("You are too big");
-// } else if(isAdult == "N") {
+// } else if(isAdult < 18) {
 //     alert("You are too young");
 // } else{
 //     alert("Ayayayi");
@@ -85,10 +85,15 @@
 //     console.log(`The area of the triangle is ${areaValue.toFixed(3)}`);
 // }
 
-// const sum = (Math.pow(firstSide, 2) + Math.pow(secondSide, 2)).toFixed(2);
-// const side = Math.pow(thirdSide, 2).toFixed(2); //need function
+// const firstValue = Math.pow(firstSide, 2).toFixed(2);
+// const secondValue = Math.pow(secondSide, 2).toFixed(2)
+// const thirdValue = Math.pow(thirdSide, 2).toFixed(2);
 
-// let showResult = (sum === side) ? console.log("Triangle is rectangular") : console.log("Triangle isn`t rectangular");
+// let showResult = (firstValue === secondValue + thirdValue ||
+//                   secondValue === firstValue + thirdValue ||
+//                   thirdValue === firstValue + secondValue  ) ? console.log("Triangle is rectangular") : console.log("Triangle isn`t rectangular");
+
+// // END
 
 // // END
 
