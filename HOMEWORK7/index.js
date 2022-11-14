@@ -129,3 +129,45 @@
 // };
 
 // // END
+
+// Task 7
+
+const cityOfUSA = ["New York", "Boston", "Chicago", "Washington"];
+const cityOfGermany = ["Berlin", "Hamburg", "Cologne", "Dortmund"];
+const cityOfUkraine = ["Lviv", "Kyiv", "Kherson", "Kharkiv"];
+
+const countryDropDown = document.querySelector("#countryDropDown");
+const cityDropDown = document.querySelector("#cityDropDown");
+const p = document.querySelector("#country");
+
+countryDropDown.addEventListener("change", e => {
+    p.innerText = e.target.value;
+    if (e.target.value == "USA") {
+        removeAll();
+        for (let i = 0; i < cityOfUSA.length; i++) {
+            cityDropDown.options[cityDropDown.options.length] = new Option(cityOfUSA[i], cityOfUSA[i]);
+        }
+    } else if(e.target.value == "Germany") {
+        removeAll();
+        for (let i = 0; i < cityOfUSA.length; i++) {
+            cityDropDown.options[cityDropDown.options.length] = new Option(cityOfGermany[i], cityOfGermany[i]);
+        }
+    } else if (e.target.value == "Ukraine"){
+        removeAll();
+        for (let i = 0; i < cityOfUSA.length; i++) {
+            cityDropDown.options[cityDropDown.options.length] = new Option(cityOfUkraine[i], cityOfUkraine[i]);
+        }
+    }
+})
+
+cityDropDown.addEventListener("change", e=>{
+    p.innerHTML += ", " + e.target.value;
+})
+
+function removeAll() {
+    while (cityDropDown.options.length > 0) {
+        cityDropDown.remove(0);
+    }
+}
+
+// END
