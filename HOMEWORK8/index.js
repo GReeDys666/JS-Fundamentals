@@ -48,15 +48,14 @@
 
 // // END
 
-// // // Task 5
+// // Task 5
 
-// input.oninput = function () {
-//   let cardCode = this.value.replace(/\D/g, '').substring(0,16)
-//   if(cardCode){
-//       cardCode = cardCode.match(/.{1,4}/g).join(' ');
-//   } 
-//   this.value = cardCode
+// function checkCreditCard(str) {
+//     let regex = /\d{4}-\d{4}-\d{4}-\d{4}/g;
+//     console.log(regex.test(str));
 // }
+
+// checkCreditCard("9999-9999-9999-9999");
 
 // // END
 
